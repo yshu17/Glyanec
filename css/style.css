@@ -1,0 +1,375 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+li {
+  padding-left: 0;
+}
+
+figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  position: relative;
+  font-family: "Proxima Nova", "Comforta", "Montserrat", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #1E2E36;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 125%;
+  text-align: center;
+  color: #1E2E36;
+}
+.title::first-letter {
+  background: linear-gradient(90deg, #44C697 50%, rgba(0, 0, 0, 0) 50%);
+}
+
+.link_button {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 50px;
+  border-radius: 3px;
+  color: white;
+  background-color: #44C697;
+  transition: all 0.3s;
+}
+.link_button:hover {
+  color: black;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.header-top {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(30, 46, 54, 0.6);
+}
+.header-top__inner, .header-top .social-wrapper, .header-top .social-list, .header-top .menu-list {
+  display: flex;
+  align-items: center;
+}
+.header .menu {
+  margin-left: auto;
+  text-transform: uppercase;
+}
+.header .menu-list {
+  gap: 15px;
+}
+.header .menu-list a {
+  padding: 0.5em 0;
+  color: #1E2E36;
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.header .menu-list a:before, .header .menu-list a:after {
+  position: absolute;
+  transition: all 0.35s ease;
+}
+.header .menu-list a:before {
+  bottom: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #44C697;
+}
+.header .menu-list a:hover:before, .header .menu-list .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.header .menu-list a:hover:after, .header .menu-list .current a:after {
+  max-width: 100%;
+}
+.header .social-wrapper {
+  gap: 50px;
+}
+.header .social-list {
+  gap: 5px;
+}
+.header .social-list__img {
+  width: 80%;
+}
+.header .phone__link::after {
+  content: url("../images/svg/Arrow.svg");
+  vertical-align: middle;
+}
+.header .phone__link::before {
+  content: url("../images/svg/Telephone.svg");
+  vertical-align: middle;
+}
+.header-bot {
+  padding: 15px 0;
+}
+.header-bot__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .categories-list {
+  display: flex;
+  gap: 15px;
+  text-transform: uppercase;
+}
+.header .callback-bucket {
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+}
+.header .bucket__link {
+  display: flex;
+  align-items: center;
+}
+.header .bucket__link::before {
+  content: url("../images/svg/Bucket.svg");
+  transform: scale(0.8);
+}
+.header .categories {
+  text-align: start;
+}
+.header .categories__link_dropdown {
+  display: flex;
+  align-items: center;
+}
+.header .categories__link_dropdown::after {
+  content: url("../images/svg/Arrow.svg");
+  transform: scale(0.8) rotate(90deg);
+  transition: all 0.3s;
+}
+.header .categories__link_dropdown:hover::after {
+  transform: scale(0.8) rotate(0deg);
+  transition: all 0.3s;
+}
+.header .logo {
+  width: 100%;
+}
+
+.hero {
+  margin-top: 164px;
+  width: 100%;
+  height: calc(100vh - 164px);
+  background-image: url("../images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__inner {
+  position: relative;
+}
+.hero-minimodal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  border-left: 15px solid #44C697;
+  padding: 100px 70px;
+  background-color: white;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 64px;
+  margin: 0 0 50px;
+}
+.hero-subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+.hero-descript {
+  text-align: center;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0 0 30px;
+}
+.hero__link {
+  text-transform: uppercase;
+  max-width: 250px;
+  margin: 0 0 50px;
+}
+.hero-counter {
+  font-size: 36px;
+  margin: 0 0 5px;
+}
+.hero .hero-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.hero__link_prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1E2E36;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+.hero__link_prev::before {
+  content: "<";
+  color: black;
+  transform: translateX(-1px);
+}
+.hero__link_next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1E2E36;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #1E2E36;
+}
+.hero__link_next::before {
+  content: ">";
+  color: white;
+}
+
+.benefits {
+  padding: 100px 0 0;
+}
+.benefits-title {
+  margin: 0 0 50px;
+}
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.benefits__item {
+  position: relative;
+}
+.benefits .effect-sadie {
+  margin: 0;
+  cursor: pointer;
+}
+.benefits .effect-sadie figcaption {
+  padding: 0 30px;
+}
+.benefits .effect-sadie figcaption::before {
+  transition: all 0.3s;
+}
+.benefits .effect-sadie h2 {
+  position: absolute;
+  font-size: 36px;
+  padding: 0 0 5px;
+  border-bottom: 3px solid #44C697;
+  top: 70%;
+  color: #fff;
+  transition: all 0.3s;
+}
+.benefits .effect-sadie p {
+  position: absolute;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  font-weight: 400;
+  font-size: 18px;
+  bottom: 5%;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translate3d(0, 10px, 0);
+}
+.benefits .effect-sadie img {
+  width: 100%;
+}
+.benefits .effect-sadie:hover h2 {
+  transform: translate3d(0, -70%, 0) translate3d(0, -10px, 0);
+}
+.benefits .effect-sadie:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.products {
+  padding: 100px 0 0;
+}
+.products-title {
+  margin: 0 0 50px;
+}
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 85px;
+}
+.products__img {
+  fill: green;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Black.eot");
+  src: local("Proxima Nova Black"), local("ProximaNova-Black"), url("../fonts/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Black.woff2") format("woff2"), url("../fonts/ProximaNova-Black.woff") format("woff"), url("../fonts/ProximaNova-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Extrabld.eot");
+  src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("../fonts/ProximaNova-Extrabld.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("../fonts/ProximaNova-Extrabld.woff") format("woff"), url("../fonts/ProximaNova-Extrabld.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Semibold.eot");
+  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */

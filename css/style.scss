@@ -1,0 +1,431 @@
+$color_main-text: #1E2E36;
+$color_green : #44C697;
+$color_border: rgba(30, 46, 54, 0.6);
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+// html {
+//     font-size: 62.5%;
+// }
+
+li {
+    padding-left: 0;
+}
+figure {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul,
+input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    position: relative;
+    font-family: 'Proxima Nova','Comforta', 'Montserrat', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: $color_main-text;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    color: $color_main-text;
+    &::first-letter {
+        background: linear-gradient(90deg, $color_green 50%, rgba(0,0,0,0) 50%);
+    }
+}
+
+.link_button {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 50px;
+    border-radius: 3px;
+    color: white;
+    background-color: $color_green;
+    transition: all 0.3s;
+    &:hover {
+        color: black;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+//================================HEADER================================//
+.header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top:0;left:0;
+    z-index: 999;
+    &-top {
+        padding: 10px 0;
+        border-bottom: 1px solid $color_border;
+        &__inner, .social-wrapper, .social-list , .menu-list {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .menu {
+        margin-left: auto;
+        text-transform: uppercase;
+    }
+    .menu-list {
+        gap:15px;
+        
+        & a {
+            padding: 0.5em 0;
+            color: $color_main-text;
+            position: relative;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        & a:before,
+        & a:after {
+            position: absolute;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+
+        & a:before {
+            bottom: 0;
+            display: block;
+            height: 3px;
+            width: 0%;
+            content: "";
+            background-color: $color_green;
+        }
+
+        & a:hover:before,
+        & .current a:before {
+            opacity: 1;
+            width: 100%;
+        }
+
+        & a:hover:after,
+        & .current a:after {
+            max-width: 100%;
+        }
+    }
+    .social-wrapper {
+        gap:50px
+    }
+    .social-list {
+        gap:5px;
+        &__img {
+            width: 80%;
+        }
+    }
+
+    .phone__link {
+       
+        &::after{
+            content: url('../images/svg/Arrow.svg');
+            vertical-align: middle;
+            
+        }
+        &::before {
+            content: url('../images/svg/Telephone.svg');
+            vertical-align: middle;
+        }
+        
+    }
+
+    &-bot {
+        padding: 15px 0;
+        &__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .categories-list {
+        display: flex;
+        gap:15px;
+        text-transform: uppercase;
+        
+    }
+    .callback-bucket {
+        width: 100%;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap:30px
+    }
+    .bucket__link {
+        display: flex;
+        align-items: center;
+        &::before{
+            content: url('../images/svg/Bucket.svg');
+            transform: scale(0.8);
+        }
+    }
+    .categories {
+        text-align: start;
+    }
+    .categories__link_dropdown {
+        display: flex;
+        align-items: center;
+        &::after{
+            content: url('../images/svg/Arrow.svg');
+            transform: scale(0.8) rotate(90deg);
+            transition: all 0.3s;
+        }
+        &:hover{
+            &::after{
+                transform: scale(0.8) rotate(0deg);
+                transition: all 0.3s;
+            }
+        }
+    }
+    .logo { 
+        width: 100%;
+    }
+}
+//============MAIN================//
+.hero {
+    margin-top: 164px;
+    width: 100%;
+    height: calc(100vh - 164px);
+    background-image: url('../images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__inner {
+        position: relative;
+    }
+    &-minimodal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        border-left: 15px solid $color_green;
+        padding: 100px 70px;
+        background-color: white;
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 64px;
+        margin: 0 0 50px;
+    }
+    &-subtitle {
+        font-weight: 700;
+        font-size: 36px;
+        margin: 0 0 10px;
+    }
+    &-descript {
+        text-align: center;
+        font-weight: 400;
+        font-size: 36px;
+        margin: 0 0 30px;
+    }
+    &__link {
+        text-transform: uppercase;
+        max-width: 250px;
+        margin: 0 0 50px;
+    }
+    &-counter {
+        font-size: 36px;
+        margin: 0 0 5px;
+    }
+
+    .hero-buttons-wrapper{
+        display: flex;
+        gap:10px
+    }
+    &__link_prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color_main-text;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        &::before {
+            content: "<";
+            color:black;
+            transform: translateX(-1px);
+        }
+    }
+    &__link_next {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color_main-text;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #1E2E36;
+        &::before {
+            content: ">";
+            color:white
+        }
+    }
+}
+.benefits {
+    padding: 100px 0 0;
+    &-title { 
+        margin: 0 0 50px;
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__item {
+        // max-height: 350px;
+        // max-width: 600px;
+        position: relative;
+    }
+
+    .effect-sadie{
+        margin: 0;
+        cursor: pointer;
+        figcaption {
+            padding: 0 30px;
+            &::before {
+                transition: all 0.3s;
+            }
+        }
+        h2 {
+            position: absolute;
+            font-size: 36px;
+            padding: 0 0 5px;
+            border-bottom: 3px solid $color_green;
+            top: 70%;
+            color: #fff;
+            transition: all 0.3s;       
+        }
+        p {
+            position: absolute;
+            color:white;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            font-weight: 400;
+            font-size: 18px;
+            bottom: 5%;
+            opacity: 0;
+            transition: all 0.3s;
+            transform: translate3d(0,10px,0);
+        }
+        img {
+            width: 100%;
+        }
+        &:hover {
+            h2 {
+                transform: translate3d(0,-70%,0) translate3d(0,-10px,0);
+            }
+            p {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+            }
+        }
+    }
+}
+.products { 
+    padding: 100px 0 0 ;
+    &-title {
+        margin: 0 0 50px;
+    }
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 85px;
+    }
+    &__img{
+        fill:green;
+    }
+}
+
+//============FONTS===============//
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Black.eot');
+    src: local('Proxima Nova Black'), local('ProximaNova-Black'),
+        url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Black.woff') format('woff'),
+        url('../fonts/ProximaNova-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Extrabld.eot');
+    src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+        url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+        url('../fonts/ProximaNova-Extrabld.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
+        url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+        url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Semibold.eot');
+    src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'),
+        url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Semibold.woff') format('woff'),
+        url('../fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
