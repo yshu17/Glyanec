@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -56,7 +57,12 @@ button {
   background: linear-gradient(90deg, #44C697 50%, rgba(0, 0, 0, 0) 50%);
 }
 
+input:not(:last-child) {
+  margin: 0 0 15px;
+}
+
 .link_button {
+  text-transform: uppercase;
   display: inline-block;
   text-align: center;
   padding: 15px 50px;
@@ -175,11 +181,11 @@ button {
 }
 .header .categories__link_dropdown::after {
   content: url("../images/svg/Arrow.svg");
-  transform: scale(0.8) rotate(90deg);
+  transform: scale(0.8) rotate(0deg);
   transition: all 0.3s;
 }
 .header .categories__link_dropdown:hover::after {
-  transform: scale(0.8) rotate(0deg);
+  transform: scale(0.8) rotate(90deg);
   transition: all 0.3s;
 }
 .header .logo {
@@ -269,7 +275,7 @@ button {
 .benefits {
   padding: 100px 0 0;
 }
-.benefits-title {
+.benefits__title {
   margin: 0 0 50px;
 }
 .benefits-list {
@@ -326,18 +332,336 @@ button {
 .products {
   padding: 100px 0 0;
 }
-.products-title {
+.products__inner {
+  text-align: center;
+}
+.products__title {
   margin: 0 0 50px;
 }
-.products-list {
+.products .filter-list {
   display: flex;
   justify-content: space-between;
   margin: 0 0 85px;
 }
-.products__img {
-  fill: green;
+.products .filter__img {
+  margin: 0 0 10px;
+}
+.products .filter__img path {
+  fill: black;
+  transition: all 0.3s;
+}
+.products .filter__title {
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  padding: 0 0 5px;
+}
+.products .filter__title:before, .products .filter__title:after {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.products .filter__title:before {
+  bottom: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #44C697;
+}
+.products .filter__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.products .filter__item:hover .filter__img path {
+  fill: #44C697;
+  transition: all 0.3s;
+}
+.products .filter__item:hover .filter__title:after {
+  max-width: 100%;
+  transition: all 0.3s;
+}
+.products .filter__item:hover .filter__title::before {
+  opacity: 1;
+  width: 100%;
+}
+.products .card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px;
+  margin: 0 0 50px;
+}
+.products .card__item {
+  width: 100%;
+}
+.products .card__item:hover .card-text-wrapper {
+  background-color: #44C697;
+  transition: all 0.3s;
+}
+.products .card__item:nth-child(2) .card__price, .products .card__item:last-child .card__price {
+  color: red;
+}
+.products .card__item:nth-child(2) .card__price::after, .products .card__item:last-child .card__price::after {
+  content: "8 999 ГРН";
+  font-size: small;
+  color: grey;
+  text-decoration: line-through;
+}
+.products .card__item:nth-child(1) .card__link:after, .products .card__item:nth-child(4) .card__link:after {
+  position: absolute;
+  content: "Новiнка";
+  font-size: small;
+  font-weight: 300;
+  text-transform: uppercase;
+  top: 5%;
+  left: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: #1E2E36;
+}
+.products .card__item:nth-child(2) .card__link:after, .products .card__item:last-child .card__link:after {
+  position: absolute;
+  content: "Хiт продажу";
+  font-size: small;
+  font-weight: 300;
+  text-transform: uppercase;
+  top: 5%;
+  left: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: #1E2E36;
+}
+.products .card__item:nth-child(2) .card__link::before, .products .card__item:last-child .card__link::before {
+  position: absolute;
+  content: "Акцiя";
+  font-size: small;
+  font-weight: 300;
+  text-transform: uppercase;
+  top: 20%;
+  left: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: red;
+}
+.products .card__link {
+  display: flex;
+  position: relative;
+}
+.products .card__img {
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+}
+.products .card-text-wrapper {
+  padding: 15px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
 }
 
+.about {
+  padding: 100px 0 0;
+}
+.about__title {
+  margin: 0 0 50px;
+}
+.about .content-wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 650px;
+  background-image: url("../images/about-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.about .paragraph {
+  padding: 50px 30px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-right: 15px solid #44C697;
+}
+.about .paragraph__text {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+}
+.about .paragraph__text .first-word {
+  color: #44C697;
+}
+.about .paragraph__text:not(:last-child) {
+  margin: 0 0 15px;
+}
+
+.questions {
+  padding: 100px 0;
+}
+.questions__title {
+  margin: 0 0 50px;
+}
+.questions .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 570px;
+  height: 100%;
+  background-image: url("../images/questions-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: left;
+}
+.questions .form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  background-color: white;
+  border-left: 15px solid #44C697;
+}
+.questions .form label {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 0 30px;
+}
+.questions .form__name, .questions .form__tel {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid grey;
+  animation: shake 0.14s 3;
+}
+.questions .form__name:valid, .questions .form__tel:valid {
+  border-color: #45feaf;
+  animation: none;
+}
+.questions .form__name:invalid, .questions .form__tel:invalid {
+  border-color: grey;
+  animation: shake 0.14s 3;
+}
+.questions .form__submit {
+  cursor: pointer;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  margin: 0 0 30px;
+}
+.questions .form-discription {
+  display: inline-block;
+  width: 90%;
+  max-width: 400px;
+  font-weight: 400;
+}
+.questions .form-discription span {
+  font-weight: bolder;
+}
+
+.footer {
+  color: white;
+  background-color: #1E2E36;
+  background-image: url("../images/footer-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.footer__inner {
+  background-color: #1E2E36;
+  padding: 50px 50px 15px;
+  max-height: 520px;
+  width: 50%;
+}
+.footer__logo {
+  margin: 0 0 50px;
+}
+.footer .content-wrapper {
+  text-transform: uppercase;
+  display: flex;
+  gap: 40px;
+  margin: 0 0 100px;
+}
+.footer .menu-list, .footer .categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .menu-list li, .footer .categories-list li {
+  display: inline-block;
+  padding: 0 0 0 25px;
+  position: relative;
+}
+.footer .menu-list li::before, .footer .categories-list li::before {
+  left: 0;
+  right: 100%;
+  top: 50%;
+  content: "";
+  border-left: 15px solid #44C697;
+  transform: translateY(-50%);
+  height: 3px;
+  position: absolute;
+}
+.footer .trademarks-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .company__link::before {
+  content: url("../images/svg/glyanec.svg");
+  padding: 5px;
+  vertical-align: middle;
+}
+.footer .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 15px;
+}
+.footer .contact-wrapper .days::before {
+  content: url("../images/svg/calendar.svg");
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+}
+.footer .contact-wrapper .map::before {
+  content: url("../images/svg/map-pin.svg");
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+}
+.footer .contact-wrapper .phones {
+  display: flex;
+  flex-direction: column;
+}
+.footer .contact-wrapper .phone-number:not(:last-child)::before {
+  content: url("../images/svg/smartphone_white.svg");
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+}
+.footer .contact-wrapper .phone-number:last-child::before {
+  content: url("../images/svg/smartphone_white.svg");
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+  opacity: 0;
+}
+.footer a {
+  transition: all 0.3s;
+}
+.footer a:hover {
+  color: #44C697;
+  transition: all 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    translate: 0;
+  }
+  25% {
+    translate: 5px 0;
+  }
+  75% {
+    translate: -5px 0;
+  }
+}
 @font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Black.eot");
