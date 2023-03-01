@@ -705,10 +705,11 @@ input:not(:last-child){
     svg path {
         fill: white;
         transition: all 0.3s;
-        &:hover {
-            fill:$color_green;
-            transition: all 0.3s;
-        }
+        
+    }
+    svg:hover path  {
+        fill:$color_green;
+        transition: all 0.3s;
     }
 }
 

@@ -669,7 +669,7 @@ input:not(:last-child) {
   fill: white;
   transition: all 0.3s;
 }
-.footer svg path:hover {
+.footer svg:hover path {
   fill: #44C697;
   transition: all 0.3s;
 }
