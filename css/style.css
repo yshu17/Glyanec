@@ -134,13 +134,23 @@ input:not(:last-child) {
 .header .social-list__img {
   width: 80%;
 }
+.header .phone__link {
+  display: flex;
+  align-items: center;
+}
 .header .phone__link::after {
   content: url("../images/svg/Arrow.svg");
   vertical-align: middle;
+  transform: scale(0.8) rotate(0deg);
+  transition: all 0.3s;
 }
 .header .phone__link::before {
   content: url("../images/svg/Telephone.svg");
   vertical-align: middle;
+}
+.header .phone__link:hover::after {
+  transform: scale(0.8) rotate(90deg);
+  transition: all 0.3s;
 }
 .header-bot {
   padding: 15px 0;

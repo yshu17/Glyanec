@@ -147,17 +147,22 @@ input:not(:last-child){
     }
 
     .phone__link {
-       
+        display: flex;
+        align-items: center;
         &::after{
             content: url('../images/svg/Arrow.svg');
             vertical-align: middle;
-            
+            transform: scale(0.8) rotate(0deg);
+            transition: all 0.3s;
         }
         &::before {
             content: url('../images/svg/Telephone.svg');
             vertical-align: middle;
         }
-        
+        &:hover::after{
+            transform: scale(0.8) rotate(90deg);
+            transition: all 0.3s;
+        }
     }
 
     &-bot {
