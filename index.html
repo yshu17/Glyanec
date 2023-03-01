@@ -8,6 +8,7 @@
     <title>Glyanec</title>
     <link rel="shortcut icon" href="" type="image/png">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -23,17 +24,17 @@
                             <span>Ми в соціальних мережах:</span>
                             <li class="social-list__item">
                                 <a href="javascript:void(0);" class="social-list__link">
-                                    <img src="./images/svg/Facebook.svg" alt="Facebook" class="social-list__img">
+                                    <img src="./images/svg/Facebook.svg" alt="Facebook" class="social-list__img svg">
                                 </a>
                             </li>
                             <li class="social-list__item">
                                 <a href="javascript:void(0);" class="social-list__link">
-                                    <img src="./images/svg/Instagram.svg" alt="Instagram" class="social-list__img">
+                                    <img src="./images/svg/Instagram.svg" alt="Instagram" class="social-list__img svg">
                                 </a>
                             </li>
                             <li class="social-list__item">
                                 <a href="javascript:void(0);" class="social-list__link">
-                                    <img src="./images/svg/Telegram.svg" alt="Telegram" class="social-list__img">
+                                    <img src="./images/svg/Telegram.svg" alt="Telegram" class="social-list__img svg">
                                 </a>
                             </li>
                         </ul>
@@ -125,6 +126,14 @@
     </header>
     <main class="main">
         <section class="hero" id="hero">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./images/hero-bg.png" alt="#"></div>
+                  <div class="swiper-slide"><img src="./images/hero-bg.png" alt="#"></div>
+                  <div class="swiper-slide"><img src="./images/hero-bg.png" alt="#"></div>
+                  <div class="swiper-slide"><img src="./images/hero-bg.png" alt="#"></div>
+                </div>
+            </div>
             <div class="container">
                 <div class="hero__inner">
                     <div class="hero-minimodal">
@@ -132,7 +141,7 @@
                         <h2 class="hero-subtitle">Ліжко Ornella</h2>
                         <span class="hero-descript">Це новий рівень комфортного сну</span>
                         <a href="javascript:void(0);" class="hero__link link_button">Детальніше</a>
-                        <h3 class="hero-counter">01/04</h3>
+                        <h3 class="hero-counter"></h3>
                         <div class="hero-buttons-wrapper">
                             <a href="javascript:void(0);" class="hero__link_prev"></a>
                             <a href="javascript:void(0);" class="hero__link_next"></a>
@@ -414,6 +423,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./js/img-to-svg-without-jq.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

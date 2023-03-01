@@ -132,7 +132,14 @@ input:not(:last-child) {
   gap: 5px;
 }
 .header .social-list__img {
-  width: 80%;
+  transition: all 0.3s;
+}
+.header .social-list__img path {
+  fill: black;
+}
+.header .social-list__img:hover path {
+  fill: #44C697;
+  transition: all 0.3s;
 }
 .header .phone__link {
   display: flex;
@@ -146,6 +153,7 @@ input:not(:last-child) {
 }
 .header .phone__link::before {
   content: url("../images/svg/Telephone.svg");
+  padding: 0 5px 0 0;
   vertical-align: middle;
 }
 .header .phone__link:hover::after {
@@ -206,10 +214,12 @@ input:not(:last-child) {
   margin-top: 164px;
   width: 100%;
   height: calc(100vh - 164px);
-  background-image: url("../images/hero-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+}
+.hero .container {
+  position: absolute;
+  top: 0;
+  z-index: 2;
 }
 .hero__inner {
   position: relative;
@@ -245,8 +255,12 @@ input:not(:last-child) {
   margin: 0 0 50px;
 }
 .hero-counter {
-  font-size: 36px;
+  text-align: center;
+  font-size: 24px;
   margin: 0 0 5px;
+}
+.hero-counter::first-letter {
+  font-size: 38px;
 }
 .hero .hero-buttons-wrapper {
   display: flex;

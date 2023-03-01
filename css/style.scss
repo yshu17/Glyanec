@@ -142,7 +142,15 @@ input:not(:last-child){
     .social-list {
         gap:5px;
         &__img {
-            width: 80%;
+            // width: 100%;
+            transition: all 0.3s;
+        }
+        &__img path {
+            fill: black
+        }
+        &__img:hover path {
+            fill: $color_green;
+            transition: all 0.3s;
         }
     }
 
@@ -157,6 +165,7 @@ input:not(:last-child){
         }
         &::before {
             content: url('../images/svg/Telephone.svg');
+            padding: 0 5px 0 0;
             vertical-align: middle;
         }
         &:hover::after{
@@ -223,10 +232,12 @@ input:not(:last-child){
     margin-top: 164px;
     width: 100%;
     height: calc(100vh - 164px);
-    background-image: url('../images/hero-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    .container{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
     &__inner {
         position: relative;
     }
@@ -261,8 +272,12 @@ input:not(:last-child){
         margin: 0 0 50px;
     }
     &-counter {
-        font-size: 36px;
+        text-align: center;
+        font-size: 24px;
         margin: 0 0 5px;
+        &::first-letter {
+            font-size: 38px;
+        }
     }
 
     .hero-buttons-wrapper{

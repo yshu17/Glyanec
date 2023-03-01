@@ -26,3 +26,14 @@ jQuery('img.svg').each(function(){
   }, 'xml');
 
 });
+
+var swiper = new Swiper(".hero-swiper", {
+    pagination: {
+      el: ".hero-counter",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".hero__link_next",
+      prevEl: ".hero__link_prev",
+    },
+  });
