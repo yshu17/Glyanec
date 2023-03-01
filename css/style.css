@@ -581,7 +581,6 @@ input:not(:last-child) {
 .footer__inner {
   background-color: #1E2E36;
   padding: 50px 50px 15px;
-  max-height: 520px;
   width: 50%;
 }
 .footer__logo {
@@ -658,6 +657,20 @@ input:not(:last-child) {
 }
 .footer a:hover {
   color: #44C697;
+  transition: all 0.3s;
+}
+.footer .social__text {
+  text-transform: none;
+}
+.footer .social-list {
+  display: flex;
+}
+.footer svg path {
+  fill: white;
+  transition: all 0.3s;
+}
+.footer svg path:hover {
+  fill: #44C697;
   transition: all 0.3s;
 }
 

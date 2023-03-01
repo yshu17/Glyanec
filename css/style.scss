@@ -609,7 +609,7 @@ input:not(:last-child){
     &__inner {
         background-color: $color_main-text;
         padding: 50px 50px 15px;
-        max-height: 520px;
+        // max-height: 520px;
         width: 50%;
     }
     &__logo {
@@ -696,7 +696,20 @@ input:not(:last-child){
         color: $color_green;
         transition: all 0.3s;
     }
-    
+    .social__text {
+        text-transform: none;
+    }
+    .social-list {
+        display: flex;
+    }
+    svg path {
+        fill: white;
+        transition: all 0.3s;
+        &:hover {
+            fill:$color_green;
+            transition: all 0.3s;
+        }
+    }
 }
 
 //===============KEYFRAMES===================//
