@@ -308,49 +308,61 @@ input:not(:last-child) {
   gap: 30px;
 }
 .benefits__item {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 0 0 0 15px;
+  width: 100%;
+  height: 100%;
+  max-width: 580px;
+  min-width: 275px;
+  min-height: 250px;
+  gap: 30px;
   position: relative;
 }
-.benefits .effect-sadie {
-  margin: 0;
-  cursor: pointer;
+.benefits__item:nth-child(1) {
+  background-image: url("../images/furniture.png");
 }
-.benefits .effect-sadie figcaption {
-  padding: 0 30px;
+.benefits__item:nth-child(2) {
+  background-image: url("../images/humans.png");
 }
-.benefits .effect-sadie figcaption::before {
-  transition: all 0.3s;
+.benefits__item:nth-child(3) {
+  background-image: url("../images/dell.png");
 }
-.benefits .effect-sadie h2 {
-  position: absolute;
+.benefits__item h3 {
+  display: inline;
   font-size: 36px;
   padding: 0 0 5px;
   border-bottom: 3px solid #44C697;
-  top: 70%;
   color: #fff;
+  transform: translate3d(0, 50%, 0);
   transition: all 0.3s;
 }
-.benefits .effect-sadie p {
-  position: absolute;
+.benefits__item p {
   color: white;
   display: inline-block;
   width: 100%;
   max-width: 400px;
   font-weight: 400;
   font-size: 18px;
-  bottom: 5%;
   opacity: 0;
   transition: all 0.3s;
   transform: translate3d(0, 10px, 0);
 }
-.benefits .effect-sadie img {
-  width: 100%;
+.benefits__item:hover {
+  cursor: pointer;
 }
-.benefits .effect-sadie:hover h2 {
-  transform: translate3d(0, -70%, 0) translate3d(0, -10px, 0);
+.benefits__item:hover h3 {
+  transform: translate3d(0, -30%, 0);
 }
-.benefits .effect-sadie:hover p {
+.benefits__item:hover p {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -15px, 0);
 }
 
 .products {
