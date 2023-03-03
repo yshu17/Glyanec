@@ -157,14 +157,13 @@ input:not(:last-child) {
 
     .social-list {
         gap: 5px;
-
         &__img {
-            // width: 100%;
             transition: all 0.3s;
         }
 
         &__img path {
-            fill: black
+            fill: black;
+            transition: all 0.3s;
         }
 
         &__img:hover path {
@@ -278,6 +277,19 @@ input:not(:last-child) {
             .social-list {
                 display: flex;
                 align-items: center;
+                &__img {
+                    transition: all 0.3s;
+                }
+        
+                &__img path {
+                    fill: black;
+                    transition: all 0.3s;
+                }
+        
+                &__img:hover path {
+                    fill: $color_green;
+                    transition: all 0.3s;
+                }
             }
             .phone__link {
                 display: flex;
@@ -939,13 +951,13 @@ input:not(:last-child) {
         padding: 0 15px;
     }
     .header {
-        // width: 30%;
-        // left: 70%;
+        max-width: 300px ;
+        left:calc(100% - 300px);
         width: 100%;
         padding: 0 15px 0 0;
         position: fixed;
         transition: all 0.3s;
-        top:100px;
+        top:14%;
         transform: translateX(200%);
         
         &-top,&-bot { 
@@ -1076,6 +1088,9 @@ input:not(:last-child) {
         transition: all 0.6s;
     }
 
+    .hero {
+        margin-top: 138px;
+    }
     .benefits-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
@@ -1195,6 +1210,11 @@ input:not(:last-child) {
     }
     .footer .footer__logo {
         width: 90%;
+    }
+}
+@media (max-width:400px) {
+    .header {
+        top:12%
     }
 }
 //===============KEYFRAMES===================//
