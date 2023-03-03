@@ -88,7 +88,10 @@ input:not(:last-child) {
   padding: 10px 0;
   border-bottom: 1px solid rgba(30, 46, 54, 0.6);
 }
-.header-top__inner, .header-top .social-wrapper, .header-top .social-list, .header-top .menu-list {
+.header-top__inner,
+.header-top .social-wrapper,
+.header-top .social-list,
+.header-top .menu-list {
   display: flex;
   align-items: center;
 }
@@ -210,6 +213,48 @@ input:not(:last-child) {
   width: 100%;
 }
 
+.header_mobile {
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  background-color: white;
+  width: 100%;
+}
+.header_mobile__inner {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_mobile__inner .social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header_mobile__inner .social-wrapper .social-list {
+  display: flex;
+  align-items: center;
+}
+.header_mobile__inner .social-wrapper .phone__link {
+  display: flex;
+  align-items: center;
+}
+.header_mobile__inner .social-wrapper .phone__link::after {
+  content: url("../images/svg/Arrow.svg");
+  vertical-align: middle;
+  transform: scale(0.8) rotate(0deg);
+  transition: all 0.3s;
+}
+.header_mobile__inner .social-wrapper .phone__link::before {
+  content: url("../images/svg/Telephone.svg");
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+}
+.header_mobile__inner .social-wrapper .phone__link:hover::after {
+  transform: scale(0.8) rotate(90deg);
+  transition: all 0.3s;
+}
+
 .hero {
   margin-top: 164px;
   width: 100%;
@@ -316,7 +361,7 @@ input:not(:last-child) {
   flex-direction: column;
   justify-content: end;
   align-items: start;
-  padding: 0 0 0 15px;
+  padding: 0 15px;
   width: 100%;
   height: 100%;
   max-width: 580px;
@@ -511,6 +556,7 @@ input:not(:last-child) {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: center;
 }
 .about .paragraph {
   padding: 50px 30px;
@@ -547,6 +593,7 @@ input:not(:last-child) {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: left;
+  background-position-y: center;
 }
 .questions .form {
   display: flex;
@@ -618,17 +665,20 @@ input:not(:last-child) {
   gap: 40px;
   margin: 0 0 100px;
 }
-.footer .menu-list, .footer .categories-list {
+.footer .menu-list,
+.footer .categories-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.footer .menu-list li, .footer .categories-list li {
+.footer .menu-list li,
+.footer .categories-list li {
   display: inline-block;
   padding: 0 0 0 25px;
   position: relative;
 }
-.footer .menu-list li::before, .footer .categories-list li::before {
+.footer .menu-list li::before,
+.footer .categories-list li::before {
   left: 0;
   right: 100%;
   top: 50%;
@@ -700,6 +750,267 @@ input:not(:last-child) {
   transition: all 0.3s;
 }
 
+@media (max-width: 1400px) {
+  .header .categories-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .header .social-list span {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .benefits, .products, .about, .questions {
+    padding: 50px 0 0 0;
+  }
+  .benefits__title, .products__title, .about__title, .questions__title {
+    margin: 0 0 30px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .header {
+    width: 100%;
+    padding: 0 15px 0 0;
+    position: fixed;
+    transition: all 0.3s;
+    top: 100px;
+    transform: translateX(200%);
+  }
+  .header-top, .header-bot {
+    border-bottom: none;
+    padding: 0;
+    border-right: 15px solid #44C697;
+  }
+  .header-top .container, .header-bot .container {
+    padding: 15px 30px 0 0;
+  }
+  .header-bot .container {
+    padding: 15px 30px 15px 0;
+  }
+  .header-top {
+    margin: 0 0 -1px;
+  }
+  .header-top__inner {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: end;
+  }
+  .header-bot__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .header .menu {
+    margin: 0;
+  }
+  .header .menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .header .social-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+  .header .logo {
+    display: none;
+  }
+  .header .categories-list {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0 0 15px;
+  }
+  .header .callback-bucket {
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+  .header .callback__link {
+    padding: 10px;
+    max-width: 150px;
+  }
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 0 15px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    transform: scale(1.3);
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: #1E2E36;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 16px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 20px;
+  }
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+  .overlay {
+    transform: translate(0);
+    transition: all 0.6s;
+  }
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    justify-items: center;
+    justify-content: center;
+  }
+  .benefits__item {
+    max-width: none;
+  }
+  .products .card-list {
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    justify-content: center;
+    justify-items: center;
+  }
+  .about .paragraph {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+  }
+  .about .content-wrapper {
+    min-height: auto;
+  }
+  .questions .content-wrapper {
+    min-height: auto;
+    background-size: cover;
+    justify-content: center;
+  }
+  .footer {
+    background-image: none;
+  }
+  .footer .footer__logo {
+    margin: 0 0 15px;
+  }
+  .footer__inner {
+    width: 100%;
+    padding: 30px 30px 15px;
+    text-align: center;
+  }
+  .footer .content-wrapper {
+    margin: 0 0 15px;
+    justify-content: space-around;
+  }
+  .footer .social__text {
+    display: none;
+  }
+  .footer .social-list {
+    justify-content: center;
+  }
+}
+@media (max-width: 900px) {
+  .header_mobile__inner .social-wrapper .social-list {
+    display: none;
+  }
+  .hero-minimodal {
+    padding: 50px 25px;
+  }
+  .hero-title {
+    font-size: 36px;
+    margin: 0 0 25px;
+  }
+  .hero-subtitle, .hero-descript {
+    font-size: 24px;
+  }
+}
+@media (max-width: 770px) {
+  .benefits__item p {
+    max-width: none;
+  }
+  .products .card-list {
+    grid-template-columns: repeat(auto-fill, minmax(355px, 500px));
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    margin: 0 0 15px;
+  }
+  .products .filter-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 0 0 15px;
+  }
+  .footer .categories-list, .footer .menu-list {
+    display: none;
+  }
+  .footer .contact-wrapper {
+    flex-direction: row;
+  }
+}
+@media (max-width: 700px) {
+  .header_mobile__inner .social-wrapper {
+    display: none;
+  }
+  .header_mobile__inner .logo {
+    margin: 0;
+  }
+  .questions .form {
+    padding: 25px 15px;
+  }
+}
+@media (max-width: 650px) {
+  .footer .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .header_mobile .logo__img, .header_mobile .logo {
+    width: 90%;
+  }
+  .hero-minimodal {
+    padding: 15px 0;
+  }
+  .footer .footer__inner {
+    padding: 15px;
+  }
+  .footer .footer__logo {
+    width: 90%;
+  }
+}
 @keyframes shake {
   0%, 100% {
     translate: 0;

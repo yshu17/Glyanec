@@ -28,12 +28,19 @@ jQuery('img.svg').each(function(){
 });
 
 var swiper = new Swiper(".hero-swiper", {
-    pagination: {
-      el: ".hero-counter",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".hero__link_next",
-      prevEl: ".hero__link_prev",
-    },
-  });
+  pagination: {
+    el: ".hero-counter",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".hero__link_next",
+    prevEl: ".hero__link_prev",
+  },
+});
+
+var burgerMenu = document.getElementById('burger-menu');
+var overlay = document.querySelector('header');
+burgerMenu.addEventListener('click',function(){
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
