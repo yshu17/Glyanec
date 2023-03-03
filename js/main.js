@@ -40,7 +40,11 @@ var swiper = new Swiper(".hero-swiper", {
 
 var burgerMenu = document.getElementById('burger-menu');
 var overlay = document.querySelector('header');
-burgerMenu.addEventListener('click',function(){
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
+burgerMenu.addEventListener('click',function(e){
+  this.classList.toggle('close');
+  overlay.classList.toggle('overlay');
+});
+
+$(window).on("load",function(){
+  $("a[href*='#']").mPageScroll2id();
 });

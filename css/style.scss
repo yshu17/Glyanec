@@ -319,7 +319,8 @@ input:not(:last-child) {
 
 //============MAIN================//
 .hero {
-    margin-top: 164px;
+    padding: 164px 0 0 0;
+
     width: 100%;
     height: calc(100vh - 164px);
     position: relative;
@@ -1089,7 +1090,7 @@ input:not(:last-child) {
     }
 
     .hero {
-        margin-top: 138px;
+        padding: 138px 0 0 0;
     }
     .benefits-list {
         display: grid;
