@@ -70,6 +70,10 @@ input:not(:last-child) {
   color: white;
   background-color: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .link_button:hover {
   color: black;
@@ -136,14 +140,26 @@ input:not(:last-child) {
 }
 .header .social-list__img {
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .social-list__img path {
   fill: black;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .social-list__img:hover path {
   fill: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .phone__link {
   display: flex;
@@ -154,6 +170,10 @@ input:not(:last-child) {
   vertical-align: middle;
   transform: scale(0.8) rotate(0deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .phone__link::before {
   content: url("../images/svg/Telephone.svg");
@@ -163,6 +183,10 @@ input:not(:last-child) {
 .header .phone__link:hover::after {
   transform: scale(0.8) rotate(90deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header-bot {
   padding: 15px 0;
@@ -205,10 +229,18 @@ input:not(:last-child) {
   content: url("../images/svg/Arrow.svg");
   transform: scale(0.8) rotate(0deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .categories__link_dropdown:hover::after {
   transform: scale(0.8) rotate(90deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header .logo {
   width: 100%;
@@ -238,14 +270,26 @@ input:not(:last-child) {
 }
 .header_mobile__inner .social-wrapper .social-list__img {
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header_mobile__inner .social-wrapper .social-list__img path {
   fill: black;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header_mobile__inner .social-wrapper .social-list__img:hover path {
   fill: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header_mobile__inner .social-wrapper .phone__link {
   display: flex;
@@ -256,6 +300,10 @@ input:not(:last-child) {
   vertical-align: middle;
   transform: scale(0.8) rotate(0deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .header_mobile__inner .social-wrapper .phone__link::before {
   content: url("../images/svg/Telephone.svg");
@@ -265,10 +313,14 @@ input:not(:last-child) {
 .header_mobile__inner .social-wrapper .phone__link:hover::after {
   transform: scale(0.8) rotate(90deg);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 
 .hero {
-  padding: 164px 0 0 0;
+  margin: 164px 0 0 0;
   width: 100%;
   height: calc(100vh - 164px);
   position: relative;
@@ -399,6 +451,10 @@ input:not(:last-child) {
   color: #fff;
   transform: translate3d(0, 50%, 0);
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .benefits__item p {
   color: white;
@@ -409,6 +465,10 @@ input:not(:last-child) {
   font-size: 18px;
   opacity: 0;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
   transform: translate3d(0, 10px, 0);
 }
 .benefits__item:hover {
@@ -442,10 +502,18 @@ input:not(:last-child) {
 .products .filter__img path {
   fill: black;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .products .filter__title {
   text-transform: uppercase;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
   position: relative;
   padding: 0 0 5px;
 }
@@ -470,10 +538,18 @@ input:not(:last-child) {
 .products .filter__item:hover .filter__img path {
   fill: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .products .filter__item:hover .filter__title:after {
   max-width: 100%;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .products .filter__item:hover .filter__title::before {
   opacity: 1;
@@ -491,6 +567,10 @@ input:not(:last-child) {
 .products .card__item:hover .card-text-wrapper {
   background-color: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .products .card__item:nth-child(2) .card__price, .products .card__item:last-child .card__price {
   color: red;
@@ -552,6 +632,10 @@ input:not(:last-child) {
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 
 .about {
@@ -742,10 +826,18 @@ input:not(:last-child) {
 }
 .footer a {
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .footer a:hover {
   color: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .footer .social__text {
   text-transform: none;
@@ -756,10 +848,18 @@ input:not(:last-child) {
 .footer svg path {
   fill: white;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 .footer svg:hover path {
   fill: #44C697;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 
 @media (max-width: 1400px) {
@@ -773,10 +873,16 @@ input:not(:last-child) {
   }
 }
 @media (max-width: 1150px) {
-  .benefits, .products, .about, .questions {
+  .benefits,
+  .products,
+  .about,
+  .questions {
     padding: 50px 0 0 0;
   }
-  .benefits__title, .products__title, .about__title, .questions__title {
+  .benefits__title,
+  .products__title,
+  .about__title,
+  .questions__title {
     margin: 0 0 30px;
   }
   .container {
@@ -789,6 +895,10 @@ input:not(:last-child) {
     padding: 0 15px 0 0;
     position: fixed;
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
     top: 14%;
     transform: translateX(200%);
   }
@@ -907,7 +1017,7 @@ input:not(:last-child) {
     transition: all 0.6s;
   }
   .hero {
-    padding: 138px 0 0 0;
+    margin: 138px 0 0 0;
   }
   .benefits-list {
     display: grid;
@@ -969,7 +1079,8 @@ input:not(:last-child) {
     font-size: 36px;
     margin: 0 0 25px;
   }
-  .hero-subtitle, .hero-descript {
+  .hero-subtitle,
+  .hero-descript {
     font-size: 24px;
   }
 }
@@ -990,7 +1101,8 @@ input:not(:last-child) {
     gap: 15px;
     margin: 0 0 15px;
   }
-  .footer .categories-list, .footer .menu-list {
+  .footer .categories-list,
+  .footer .menu-list {
     display: none;
   }
   .footer .contact-wrapper {
@@ -1015,7 +1127,8 @@ input:not(:last-child) {
   }
 }
 @media (max-width: 500px) {
-  .header_mobile .logo__img, .header_mobile .logo {
+  .header_mobile .logo__img,
+  .header_mobile .logo {
     width: 90%;
   }
   .hero-minimodal {
